@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Shreyu
 ### [Live Site](https://shreyu-react.coderthemes.com/auth/login)
 
-## Shreyu is a fully featured admin and dashboard template. Shreyu comes with tones of well designed & ready to use UI elements, components, widgets and pages.
+#### Shreyu is a fully featured admin and dashboard template. Shreyu comes with tones of well designed & ready to use UI elements, components, widgets and pages.
 
 
 ![Modern UI/UX GPT-3](https://shreyu-react.coderthemes.com/static/media/vertical-full-sm.b2bdd3a8.png) \
