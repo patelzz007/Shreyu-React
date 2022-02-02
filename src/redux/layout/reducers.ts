@@ -34,38 +34,53 @@ const Layout = (
 ) => {
   switch (action.type) {
     case LayoutActionTypes.CHANGE_LAYOUT:
+      console.log("State => ", state);
+      console.log("Layout Type => ", action.payload);
       return {
         ...state,
         layoutType: action.payload,
       };
     case LayoutActionTypes.CHANGE_LAYOUT_WIDTH:
       const layoutConfig = getLayoutConfigs(action.payload! && action.payload);
+      console.log("State => ", state);
+      console.log("Layout Width => ", action.payload);
+      console.log("Layout Config => ", layoutConfig);
       return {
         ...state,
         layoutWidth: action.payload,
         ...layoutConfig,
       };
     case LayoutActionTypes.CHANGE_MENU_POSITIONS:
+      console.log("State => ", state);
+      console.log("Menu Position => ", action.payload);
       return {
         ...state,
         menuPosition: action.payload,
       };
     case LayoutActionTypes.CHANGE_SIDEBAR_THEME:
+      console.log("State => ", state);
+      console.log("Left Side Bar Theme => ", action.payload);
       return {
         ...state,
         leftSideBarTheme: action.payload,
       };
     case LayoutActionTypes.CHANGE_SIDEBAR_TYPE:
+      console.log("State => ", state);
+      console.log("Left Side Bar Type => ", action.payload);
       return {
         ...state,
         leftSideBarType: action.payload,
       };
     case LayoutActionTypes.TOGGLE_SIDEBAR_USER_INFO:
+      console.log("State => ", state);
+      console.log("Show Sidebar User Info => ", action.payload);
       return {
         ...state,
         showSidebarUserInfo: action.payload,
       };
     case LayoutActionTypes.CHANGE_TOPBAR_THEME:
+      console.log("State => ", state);
+      console.log("Topbar Theme => ", action.payload);
       return {
         ...state,
         topbarTheme: action.payload,

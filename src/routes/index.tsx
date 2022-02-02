@@ -15,9 +15,6 @@ const ForgetPassword = React.lazy(() => import("../pages/auth/ForgetPassword"));
 const Register = React.lazy(() => import("../pages/auth/Register"));
 const LockScreen = React.lazy(() => import("../pages/auth/LockScreen"));
 
-// landing
-const Landing = React.lazy(() => import("../pages/landing/"));
-
 // dashboard
 const EcommerceDashboard = React.lazy(
   () => import("../pages/dashboard/Ecommerce/"),
@@ -442,12 +439,6 @@ const authRoutes: RoutesProps[] = [
 
 // public routes
 const otherPublicRoutes: RoutesProps[] = [
-  {
-    path: "/landing",
-    name: "landing",
-    component: Landing,
-    route: Route,
-  },
   {
     path: "/maintenance",
     name: "Maintenance",
