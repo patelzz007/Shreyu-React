@@ -21,10 +21,10 @@ const INIT_STATE = {
   layoutType: LayoutTypes.LAYOUT_VERTICAL,
   layoutWidth: LayoutWidth.LAYOUT_WIDTH_FLUID,
   menuPosition: MenuPositions.MENU_POSITION_FIXED,
-  leftSideBarTheme: SideBarTheme.LEFT_SIDEBAR_THEME_DARK,
+  leftSideBarTheme: SideBarTheme.LEFT_SIDEBAR_THEME_LIGHT,
   leftSideBarType: SideBarTypes.LEFT_SIDEBAR_TYPE_DEFAULT,
   showSidebarUserInfo: true,
-  topbarTheme: TopbarTheme.TOPBAR_THEME_DARK,
+  topbarTheme: TopbarTheme.TOPBAR_THEME_LIGHT,
   isOpenRightSideBar: false,
 };
 
