@@ -1,26 +1,26 @@
-import { all, call, fork, takeEvery } from 'redux-saga/effects';
+import { all, call, fork, takeEvery } from "redux-saga/effects";
 
 // constants
-import { LayoutActionTypes } from './constants';
+import { LayoutActionTypes } from "./constants";
 
 /**
  * Toggle the class on body
  * @param {*} cssClass
  */
-function manageBodyClass(cssClass: string, action = 'toggle') {
-    switch (action) {
-        case 'add':
-            if (document.body) document.body.classList.add(cssClass);
-            break;
-        case 'remove':
-            if (document.body) document.body.classList.remove(cssClass);
-            break;
-        default:
-            if (document.body) document.body.classList.toggle(cssClass);
-            break;
-    }
+function manageBodyClass(cssClass: string, action = "toggle") {
+  switch (action) {
+    case "add":
+      if (document.body) document.body.classList.add(cssClass);
+      break;
+    case "remove":
+      if (document.body) document.body.classList.remove(cssClass);
+      break;
+    default:
+      if (document.body) document.body.classList.toggle(cssClass);
+      break;
+  }
 
-    return true;
+  return true;
 }
 
 /**
@@ -34,30 +34,30 @@ function manageBodyClass(cssClass: string, action = 'toggle') {
  * Show the rightsidebar
  */
 function* showRightSidebar() {
-    try {
-        yield call(manageBodyClass, 'right-bar-enabled', 'add');
-    } catch (error) {}
+  try {
+    yield call(manageBodyClass, "right-bar-enabled", "add");
+  } catch (error) {}
 }
 
 /**
  * Hides the rightsidebar
  */
 function* hideRightSidebar() {
-    try {
-        yield call(manageBodyClass, 'right-bar-enabled', 'remove');
-    } catch (error) {}
+  try {
+    yield call(manageBodyClass, "right-bar-enabled", "remove");
+  } catch (error) {}
 }
 
 export function* watchShowRightSidebar(): any {
-    yield takeEvery(LayoutActionTypes.SHOW_RIGHT_SIDEBAR, showRightSidebar);
+  yield takeEvery(LayoutActionTypes.SHOW_RIGHT_SIDEBAR, showRightSidebar);
 }
 
 export function* watchHideRightSidebar(): any {
-    yield takeEvery(LayoutActionTypes.HIDE_RIGHT_SIDEBAR, hideRightSidebar);
+  yield takeEvery(LayoutActionTypes.HIDE_RIGHT_SIDEBAR, hideRightSidebar);
 }
 
 function* LayoutSaga(): any {
-    yield all([fork(watchShowRightSidebar), fork(watchHideRightSidebar)]);
+  yield all([fork(watchShowRightSidebar), fork(watchHideRightSidebar)]);
 }
 
 export default LayoutSaga;

@@ -7,7 +7,6 @@ Contact: support@coderthemes.com
 File: Main Css File
 */
 
-
 //Fonts
 @import "custom/fonts/fonts";
 
@@ -16,7 +15,6 @@ File: Main Css File
 @import "./node_modules/bootstrap/scss/variables";
 @import "config/variables-dark";
 @import "./node_modules/bootstrap/scss/mixins.scss";
-
 
 // Structure
 @import "custom/structure/general";
@@ -53,7 +51,6 @@ File: Main Css File
 @import "custom/pages/file-manager.scss";
 @import "custom/pages/chat";
 
-
 // Plugins
 @import "custom/plugins/apexcharts";
 @import "custom/plugins/calendar";
@@ -69,7 +66,7 @@ File: Main Css File
 @import "custom/plugins/parsley";
 @import "custom/plugins/quilljs-editor";
 @import "custom/plugins/react-select"; // react-select style
-@import 'custom/plugins/react-table'; // react table style
+@import "custom/plugins/react-table"; // react table style
 @import "custom/plugins/flatpickr";
 @import "custom/plugins/dropzone";
 @import "custom/plugins/google-maps";

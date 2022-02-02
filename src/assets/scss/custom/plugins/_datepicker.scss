@@ -54,7 +54,7 @@ $datepicker__triangle-size: 8px;
   &,
   &::before {
     border-top: none;
-    border-bottom-color:  $datepicker__muted-color;
+    border-bottom-color: $datepicker__muted-color;
   }
 
   &::before {
@@ -762,7 +762,7 @@ $datepicker__triangle-size: 8px;
   }
   .react-datepicker {
     width: 100%;
-    
+
     .react-datepicker__month-container {
       width: 100%;
 
@@ -777,7 +777,6 @@ $datepicker__triangle-size: 8px;
         align-items: center;
         height: 52px;
       }
-
     }
   }
 }

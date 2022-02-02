@@ -1,8 +1,8 @@
 //
 // google-maps.scss
 //
- 
-.gmaps, 
+
+.gmaps,
 .gmaps-panaroma {
   height: 300px;
   background: $gray-100;
@@ -33,7 +33,7 @@
     border-right: 16px solid transparent;
     border-top: 16px solid $primary;
   }
-  
+
   &.below {
     top: -15px;
     border-left: 16px solid transparent;
