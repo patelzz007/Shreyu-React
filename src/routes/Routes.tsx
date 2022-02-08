@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-// layout constants
-import { LayoutTypes } from "../constants/layout";
+// // layout constants
+// import { LayoutTypes } from "../constants/layout";
 
 // strore
 import { RootState } from "../redux/store";
@@ -11,9 +11,9 @@ import { RootState } from "../redux/store";
 // All layouts containers
 import DefaultLayout from "../layouts/Default";
 import VerticalLayout from "../layouts/Vertical";
-import DetachedLayout from "../layouts/Detached";
-import HorizontalLayout from "../layouts/Horizontal/";
-import TwoColumnLayout from "../layouts/TwoColumn/";
+// import DetachedLayout from "../layouts/Detached";
+// import HorizontalLayout from "../layouts/Horizontal/";
+// import TwoColumnLayout from "../layouts/TwoColumn/";
 
 import {
   authProtectedFlattenRoutes,
@@ -24,31 +24,9 @@ import {
 interface RoutesProps {}
 
 const Routes = (props: RoutesProps) => {
-  const { layout } = useSelector((state: RootState) => ({
-    layout: state.Layout,
+  const { layout } = useSelector(({ Layout }: RootState) => ({
+    layout: Layout,
   }));
-
-  const getLayout = () => {
-    let layoutCls = TwoColumnLayout;
-
-    switch (layout.layoutType) {
-      case LayoutTypes.LAYOUT_HORIZONTAL:
-        layoutCls = HorizontalLayout;
-        break;
-      case LayoutTypes.LAYOUT_DETACHED:
-        layoutCls = DetachedLayout;
-        break;
-      case LayoutTypes.LAYOUT_VERTICAL:
-        layoutCls = VerticalLayout;
-        break;
-      default:
-        layoutCls = TwoColumnLayout;
-        break;
-    }
-    return layoutCls;
-  };
-
-  let Layout = getLayout();
 
   return (
     <BrowserRouter>
@@ -74,7 +52,7 @@ const Routes = (props: RoutesProps) => {
         </Route>
 
         <Route path={authProtectedFlattenRoutes.map((r: any) => r["path"])}>
-          <Layout {...props}>
+          <VerticalLayout {...props}>
             <Switch>
               {authProtectedFlattenRoutes.map((route: any, index: number) => {
                 return (
@@ -90,7 +68,7 @@ const Routes = (props: RoutesProps) => {
                 );
               })}
             </Switch>
-          </Layout>
+          </VerticalLayout>
         </Route>
       </Switch>
     </BrowserRouter>
